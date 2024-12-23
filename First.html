@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>small app</title>
+</head>
+  <style>
+     *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+     }
+     footer{
+     }
+     .btn{
+        padding: 15px;
+        background: transparent;
+        width: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+        height: 100px;
+     }
+     .btn1{
+        background: #DCDEEE;
+        width: 500px;
+        margin-left: 20px;
+        border-radius: 6px;
+        min-height: 13vh;
+        margin-top: 100px;
+     }
+     .btn1 .btn2{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+     }
+     .btn2 button{
+        padding: 15px;
+        width: 100px;
+        background: transparent;
+        border: none;
+        font-size: 17px;
+        font-weight: bold;
+        border-radius: 10px;
+        box-shadow: inset 2px 2px 1px rgba(255,255,255,0.5),
+                   inset -2px -2px 1px rgba(255,255,255,0.4);
+     }
+     .by{
+        color: blue;
+     }
+     .sl{
+        color: #FF0D84;
+     }
+     .btn button{
+        padding: 15px;
+        border: none;
+        margin: 4px;
+        width: 100px;
+        color: blue;
+        border-radius: 10px;
+        background: transparent;
+        box-shadow: inset 2px 2px 1px rgba(255,255,255,0.7),
+                 inset  -2px -2px 1px rgba(255,255,255,0.5);
+     }
+     .program{
+        background: ghostwhite;
+        width: 90%;
+        margin-top: 20px;
+        min-height: 20vh;
+        padding-left: 50px;
+        padding-top: 70px;
+        margin-left: 20px;
+        border-radius: 10px;
+        display: inline-block;
+        box-shadow: inset 2px 2px 1px rgb(240,240,240),
+                    inset -2px -2px 1px rgb(240,240,240);
+     }
+     .program li{
+        width: 97%;
+        height: 50px;
+        list-style-type: none;
+        color: #960DFF;
+        font-size: 35px;
+        font-weight: bold;
+        display: flex;
+        margin: 20px;
+        padding-top: 10px;
+        position: relative;
+     }
+     .program p{
+        position: absolute;
+        right: 0;
+     }
+     .program li::before{
+        content: "";
+        position: absolute;
+        height: 25px;
+        width: 65%;
+        background: #FF0D94;
+        left: 170px;
+        border-radius: 20px;
+        top: 17px;
+     }
+     .spok{
+        width: 200px;
+        height: 100px;
+        background: blue;
+     }
+     .program h1{
+        background: transparent;
+        text-align: center;
+        position: absolute;
+        top: -70px;
+        border-bottom: 1px solid black;
+        padding-bottom: 15px;
+        width: 100%;
+        color: blue;
+     }
+     .program h1{
+        position: relative;
+     }
+     .imow{
+        position: relative;
+        left: -10px;
+        height: 60px;
+        width: 60px;
+        border-radius: 50%;
+        border: 1px solid black;
+     }
+     .ibow svg{
+        color: black;
+        background: green;
+     }
+     .lump{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 1.6rem;
+        margin-top: 100px;
+     }
+     .ibow button{
+        border: none;
+        border-top: 8px groove #FF8907;
+        border-right: 8px groove #FF8907;
+        border-left: 8px groove #FF8907;
+        border-bottom: 5px solid transparent;
+        height: 100px;
+        margin: 4px;
+        width: 100px;
+        border-radius: 100px;
+        background: #DCDEEE;
+        position: relative;
+     }
+     .ibow img{
+        height: 40px;
+        width: 40px;
+        border: 3px solid #07FF98;
+        border-radius: 100px;
+     }
+     .ibow p{
+        font-size: 15px;
+        font-weight: bold;
+        position: relative;
+        left: 1px;
+        top: 15px;
+     }
+     .ibow button::before{
+        content: '';
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        background: #DCDEEE;
+        bottom: 1.5px;
+        left: 5px;
+        border-radius: 100px;
+        border: 3px groove #FF8907;
+     }
+     .ibow button::after{
+          content: '';
+          position: absolute;
+          width: 10px;
+          height: 10px;
+          background: #DCDEEE;
+          bottom: 1.5px;
+          right: 5px;
+          border-radius: 100px;
+          border: 3px groove #FF8907;
+     }
+     .develop{
+        border-right: 1px solid black;
+        border-left: 1px solid blue;
+        width: 85%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        left: 80px;
+        top: 40px;
+        padding: 15px 20px;
+        margin-top: 10px;
+        box-shadow: 2px 2px 40px  -25px black;
+        text-align: start;
+        border-radius: 15px;
+     }
+     .pro{
+        border: 1px solid blue;
+        padding: 20px;
+        border-radius: 10px;
+     }
+     .html1{
+        line-height: 1.7em;
+        font-size: 24px;
+        font-family: sans-serif;
+     }
+     .html1 h1{
+        color: orange;
+        text-align: center;
+        border-bottom: 1px solid #A80BFF;
+        padding: 15px;
+        font-size: 34px;
+        font-weight: bold;
+     }
+     .html2{
+        font-size: 24px;
+        line-height: 1.7em;  .css1{
+        line-height: 1.7em;
+        font-size: 24px;
+        padding: 5px;
+     }
+     .css1 h1{
+        font-size: 34px;
+        font-weight: bold;
+        color: orange;
+        text-align: center;
+        border-bottom: 1px solid #A80BFF;
+        padding: 15px;
+     }
+     .css2{
+        font-size: 24px;
+        line-height: 1.7em;
+        padding: 5px;
+     }
+     .css2 h1{
+        font-size: 34px;
+        color: orange;
+        font-weight: bold;
+        text-align: center;
+        padding: 15px;
+        border-bottom: 1px solid #A80BFF;
+     }
+        padding: 5px;
+     }
+     .html2 h1{
+        text-align: center;
+        font-weight: bold;
+        color: orange;
+        border-bottom: 1px solid #A80BFF;
+        font-size: 34px;
+        padding: 15px;
+     }
+     .css1{
+        line-height: 1.7em;
+        font-size: 24px;
+        padding: 5px;
+     }
+     .css1 h1{
+        font-size: 34px;
+        font-weight: bold;
+        color: orange;
+        text-align: center;
+        border-bottom: 1px solid #A80BFF;
+        padding: 15px;
+     }
+     .css2{
+        font-size: 24px;
+        line-height: 1.7em;
+        padding: 5px;
+     }
+     .css2 h1{
+        font-size: 34px;
+        color: orange;
+        font-weight: bold;
+        text-align: center;
+        padding: 15px;
+        border-bottom: 1px solid #A80BFF;
+     }
+     
+       .js1{
+        line-height: 1.7em;
+        font-size: 24px;
+        padding: 5px;
+     }
+     .js1 h1{
+        font-size: 34px;
+        font-weight: bold;
+        color: orange;
+        text-align: center;
+        border-bottom: 1px solid #A80BFF;
+        padding: 15px;
+     }
+     .js2{
+        font-size: 24px;
+        line-height: 1.7em;
+        padding: 5px;
+     }
+     .js2 h1{
+        font-size: 34px;
+        color: orange;
+        font-weight: bold;
+        text-align: center;
+        padding: 15px;
+        border-bottom: 1px solid #A80BFF;
+     }
+     .wrap{
+        flex-wrap: wrap;
+     }
+     .display{
+     }
+     header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        box-shadow: 2px 2px 40px  -25px black;
+        padding: 15px;
+     }
+     .had .hw1{
+        color: orange;
+        margin-left: 10px;
+     }
+     .hw1{
+        position: relative;
+        left: 50px;
+     }
+     .had .hoo{
+        position: relative;
+        left: -1.6vh;
+        display: inline-block;
+        align-items: center;
+        justify-content: center;
+     }
+     a{
+        text-decoration: none;
+     }
+     .naak a h1{
+        color: white;
+        background: green;
+        width: 110px;
+        text-align: center;
+        font-size: 30px;
+        padding: 5px;
+        font-weight: bold;
+        border-radius: 10px;
+        position: relative;
+        left: 20px;
+     }
+     .naak{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+     }
+     .naak h2{
+        border: 2px solid #C6CBFA;
+        padding: 5px;
+        border-radius: 10px;
+        padding: 5px;
+        color: dodgerblue;
+     }
+     .hoye{
+        width: 250px;
+        height: 100%;
+        position: fixed;
+        background: ghostwhite;
+        color: white;
+        bottom: 0;
+        left: 0;
+        padding: 15px;
+        z-index: 1;
+     }
+     .hoye .ho{
+        font-size: 27px;
+        color: black;
+        margin: 50px;
+     }
+     .hoye h1{
+        background: green;
+        color: white;
+        text-align: center;
+        position: relative;
+        top: 100px;
+        width: 120px;
+        border-radius: 10px;
+     }
+     .hoye h2{
+        color: dodgerblue;
+        border: 2px solid #D4D5FF;
+        text-align: center;
+        padding: 5px;
+        border-radius: 10px;
+        width: 180px;
+        position: relative;
+        top: 10px;
+     }
+     .hoye{
+        display: none;
+     }
+     .hoye img{
+        height: 55px;
+        float: right;
+        position: fixed;
+        top: 0;
+        right: 0;
+     }
+     .iye{
+        position: absolute;
+        top: 20px;
+        left: 15px;
+     }
+     .iye{
+        display: none;
+     }
+     .iye img{
+        height: 40px;
+     }
+     
+     
+     .color{
+        background: #676792;
+        margin-top: 70px;
+        color: orange;
+     }
+     .color a{
+        color: white;
+        padding: 15px;
+     }
+     .footer2{
+        padding: 30px;
+        text-align: center;
+     }
+     .ffo{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+     }
+     .ffo h1{
+        font-size: 27px;
+        font-weight: bold;
+     }
+     .ffo li{
+        list-style-type: none;
+     }
+     .ffo a{
+        font-size: 12px;
+        font-weight: bold;
+        transition: all 0.5s;
+        margin: 10px;
+     }
+     .ffo a:hover{
+        
+     }
+     .ffo p{
+        font-size: 26px;
+        font-weight: bold;
+     }
+     .ffo img{
+        height: 40px;
+        margin: 10px;
+     }
+     .ffo img:hover{
+        background: orange;
+        border-radius: 100px;
+     }
+     .ffo input{
+        border: none;
+        padding: 8px;
+        outline: none;
+        border-radius: 3px;
+        font-size: 20px;
+        font-weight: bold;
+        margin: 5px;
+     }
+     .ffo input:focus-visible{
+        box-shadow: 0 0 0 0.25rem dodgerblue;
+     }
+     .ffo .inpp{
+        background: dodgerblue;
+        color: white;
+        border: none;
+        padding: 10px;
+        font-size: 20px;
+        border-radius: 4px;
+     }
+     @media (max-width: 480px){
+        .develop{
+           position: relative;
+           left: 40px;
+        }
+        .imow{
+           height: 30px;
+           width: 30px;
+           position: relative;
+           left: -10px;
+        }
+        .program p{
+           font-size: 17px;
+           right: -20px;
+           bottom: 27px;
+        }
+        .program li{
+           font-size: 20px;
+           padding: 5px;
+           position: relative;
+           left: -33px;
+           margin: 5px;
+        }
+        .program li::before{
+           width: 58%;
+           content: '';
+           position: absolute;
+           left: 100px;
+           top: 5px;
+           height: 12px;
+        }
+        .program h1{
+           text-align: center;
+           position: relative;
+           left: -25px;
+           font-size: 26px;
+        }
+        .hoye{
+           width: 100%;
+           padding-left: 100px;
+        }
+        .hoye h1{
+           position: relative;
+           left: 30px;
+        }
+        .iye{
+           display: block;
+        }
+        .naak{
+           display: none;
+        }
+        .ffo{
+           display: block;
+           margin: 20px;
+        }
+     }
+  </style>
+<body>
+    <div class="wrap">
+       <div class="display">
+          <header class="had">
+              <h1 class="hw1">Codeliber</h1>
+             <nav class="naak">
+             <a class="hoo" href="Sign.html"><h2>SignUp</h2></a>
+             <a class="hoo" href="input.html"><h1>Sign</h1></a>
+             </nav>
+             <nav class="hoye" id="her">
+                <img src="bx-x (1).svg" onclick="myfuntion1()">
+               <a class="ho" href="Sign.html"><h2>SignUp</h2></a>
+             <a class="ho" href="input.html"><h1>Sign</h1></a>
+             </nav>
+          </header>
+          <div class="iye">
+             <img src="bx-menu.svg"  onclick="menu()">
+          </div>
+       </div>
+    </div>
+   <div class="lump">
+      <div class="btn1">
+          <div class="btn">
+             <button>200</button>
+             <button>300</button>
+             <button>200/20</button>
+          </div>
+          <div class="btn2">
+             <button class="by">buy</button>
+             <button class="sl">sell</button>
+          </div>
+          </div>
+         <div>
+             <div class="ibow">
+                <button><img src="bxl-html5.svg" alt=""><p>100%</p></button>
+                <button><img src="bxl-css3.svg" alt=""><p>100%</p></button>
+                <button><img src="bxl-javascript.svg" alt=""><p>100%</p></button>
+             </div>
+         </div>
+      </div>
+        <div class="program"> <h1>programming</h1>
+           <li><img src="download (15).png" alt="" class="imow">HTML<p>100%</p></li>
+           <li> <img src="download (17).png" alt="" class="imow">CSS<p>100%</p></li>
+           <li> <img src="download (19).png" alt="" class="imow">JS<p>100%</p></li>
+        </div>
+        <div class="develop">
+           <div class="pro">
+              <section class="html1">
+                 <h1> what is HTML</h1>
+                 <p>HTML (HyperText Markup Language) is the standard language used to create the structure of web pages. It defines the content and layout of a webpage using a system of tags and elements. HTML works alongside CSS (for styling) and JavaScript (for interactivity) to create complete, functional websites</p>
+              </section>
+              <section class="html2">
+                 <h1>history HTML</h1>
+                 <p>The Birth of HTML (1990-1991)
+                 
+                 Tim Berners-Lee, a British computer scientist working at CERN (European Organization for Nuclear Research), invented HTML in 1990 as part of the World Wide Web project.</p>
+              </section>
+              <section class="css1">
+                 <h1> what is CSS</h1>
+                 <p>CSS (Cascading Style Sheets) is a stylesheet language used to control the presentation and layout of a webpage. It works alongside HTML to define how elements on the webpage, such as text, images, and containers, appear to users. With CSS, you can:</p>
+              </section>
+              <section class="css2">
+                 <h1>history of css</h1>
+                 <p>CSS (Cascading Style Sheets) was created by Håkon Wium Lie in 1994 while he was working at CERN, the same organization where Tim Berners-Lee invented HTML and the World Wide Web.
+</p>
+              </section>
+              <section class="js1">
+                 <h1> what is JavaScript</h1>
+                 <p>JavaScript is a powerful and versatile programming language primarily used to add interactivity and functionality to websites. It is one of the core technologies of web development, alongside HTML and CSS. While HTML structures the content and CSS styles it, JavaScript makes the content dynamic and interactive</p>
+              </section>
+              <section class="js2">
+                 <h1>history javascript</h1>
+                 <p>The Creation of JavaScript (1995)
+                 
+                 Brendan Eich, a software engineer at Netscape Communications Corporation, created JavaScript in 1995.
+                 
+                 Eich was tasked with developing a scripting language for the Netscape Navigator web browser to allow web pages to be interactive. He developed JavaScript in just 10 days under the codename Mocha.
+                 
+                 It was later renamed to LiveScript, and finally to JavaScript in December 1995, as part of a marketing strategy to align it with Java, which was becoming popular at the time.</p>
+              </section>
+           </div>
+        </div>
+        <div>
+           <div>
+              <section class="section1">
+                 
+              </section>
+           </div>
+        </div>
+   <div class="color">
+      <div class="footer1">
+         <div class="footer2">
+            <footer class="ffo">
+               <ul>
+                  <h1>company</h1>
+                  <li><a class="" href="#">About us</a></li>
+                   <li><a class="" href="#">careers</a></li>
+                   <li><a class="" href="#">press</a></li>
+                    <li><a class="" href="#">Blogs</a></li>
+               </ul>
+                <ul>
+                   <h1>support</h1>
+                   <li><a class="" href="#">helpcentre</a></li>
+                   <li><a class="" href="#">contact us</a></li>
+                   <li><a class="" href="#">fAQ</a></li>
+                   <li><a class="" href="#">Account</a></li>
+                 </ul>
+                 <ul>
+                    <h1>legal</h1>
+                    <li><a class="" href="#">Terms of service</a></li>
+                    <li><a class="" href="#">Privacy Policy</a></li>
+                    <li><a class="" href="#">cookies preferences</a></li>
+                    <li><a class="" href="#">corporate information</a></li>
+                 </ul>
+                   <ul class="ul4">
+                      <h1>connect with us</h1>
+                      <img src="facebook.png" alt="">
+                      <img src="twitter.png" alt="">
+                      <img src="telegram.png" alt="">
+                      <p>subscribe to university</p>
+                      <input type="email" name="" id="" placeholder="subscribe @Email" required>
+                      <button class="inpp"  onclick="mydo()">subscribe</button>
+                   </ul>
+            </footer>
+         </div>
+      </div>
+   </div>
+   <script>
+      function menu(){
+         document.getElementById('her').style.display = "block";
+      }
+      
+      function myfuntion1(){
+         document.getElementById('her').style.display = "none";
+      }
+      function mydo(){
+         const btn = document.querySelector('.inpp');
+         if(btn.innerHTML === "subscribe"){
+            btn.innerHTML = "subscribed";
+         }else{
+            btn.innerHTML = "subscribe";
+         }
+      }
+   </script>
+</body>
+
+</html>

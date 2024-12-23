@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>Sign Up</title>
+</head>
+   <style>
+    *{
+       margin: 0;
+       padding: 0;
+       box-sizing: border-box;
+    }
+    body{
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       min-height: 90vh;
+    }
+      .container{
+         display: flex;
+         width: 84%;
+         border: 2px solid #C2DEFF;
+         text-align: center;
+         border-radius: 8px;
+         height: 560px;
+      }
+      .container input{
+         width: 78%;
+         padding: 18px;
+         margin: 10px;
+         margin-left: 10px;
+         border-radius: 5px;
+         border: none;
+         outline: none;
+         transition: all 0.5s;
+         font-size: 20px;
+      }
+      .container h1{
+         font-size: 40px;
+         padding: 15px;
+         color: dodgerblue;
+      }
+      .container .pass:focus-visible{
+         box-shadow: 0 0 0 0.20rem dodgerblue;
+      }
+      .container .pass:focus{
+         width: 86%;
+      }
+      .pass{
+         background: rgb(240,240,240);
+      }
+      .submit{
+         background: dodgerblue;
+         font-size: 8em;
+         font-weight: bold;
+         color: white;
+      }
+      a{
+         text-decoration: none;
+         color: dodgerblue;
+      }
+   </style>
+<body>
+   <div class="container">
+      <form action="data.html">
+         <h1>Sign up</h1>
+         <input type="name" placeholder="name" class="pass" required>
+         <input type="email" placeholder="Email" id="" class="pass" required>
+         <input type="password" placeholder="Password" class="pass" id="pass" required>
+         <input type="password" placeholder="confirms"  class="pass" id="pass" required>
+         <input type="submit" value="Sign Up" class="submit">
+         <p>if you need to Login <a class="" href="input.html">LOGIN</a></p>
+      </form>
+   </div>
+   <script>
+   </script>
+</body>
+
+</html>

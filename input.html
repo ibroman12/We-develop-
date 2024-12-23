@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>Sign</title>
+</head>
+   <style>
+      *{
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;
+      }
+      body{
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         min-height: 85vh;
+      }
+      .container{
+         width: 94%;
+         border: 2px solid #2B86F3;
+         border-radius: 10px;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         text-align: center;
+         height: 450px;
+      }
+      .container input{
+         width: 80%;
+         margin: 10px;
+         padding: 15px;
+         border-radius: 6px;
+         outline: none;
+         border: none;
+         transition: all 0.5s;
+         font-size: 20px;
+      }
+      .container .pass:focus-visible{
+         box-shadow: 0 0 0 4px dodgerblue;
+      }
+      .container .pass:focus{
+         width: 90%;
+      }
+      .container h1{
+         text-align: center;
+         border-bottom: 2px solid #2B86F3;
+         padding-bottom: 15px;
+         font-size: 45px;
+         color: dodgerblue;
+      }
+      .pass{
+         background: rgb(240,240,240);
+      }
+      .btn{
+         background: dodgerblue;
+         color: white;
+         font-size: 30px;
+         font-weight: bold;
+      }
+      a{
+         text-decoration: none;
+         color: dodgerblue;
+      }
+   </style>
+<body>
+   <div class="container">
+      <form action="data.html">
+         <h1>Sign in</h1>
+         <input type="email" class="pass" placeholder="Email or username" required>
+         <input type="password" name="password" class="pass" placeholder="Password" required>
+         <input type="submit" value="LOGIN" class="btn">
+         <p>if you need to register <a class="" href="Sign.html">SignUp</a></p>
+      </form>
+   </div>
+</body>
+
+</html>
